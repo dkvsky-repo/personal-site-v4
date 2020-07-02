@@ -1,0 +1,6 @@
+[submodule "markdown/resume-data"]
+	path = markdown/resume-data
+	url = https://github.com/dkvsky-repo/resume-data.git
+[submodule "utils/markdown-importer"]
+	path = utils/markdown-importer
+	url = https://github.com/dkvsky-repo/markdown-importer.git

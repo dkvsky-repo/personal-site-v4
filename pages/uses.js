@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
 
-export default function Home() {
+export default function Uses() {
   return (
     <Layout>
-      <h1>Homepage</h1>
+      <h1>Uses Page</h1>
     </Layout>
   )
 }

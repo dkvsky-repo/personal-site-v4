@@ -1,13 +1,16 @@
-import React from 'react'
-import SocialLinks from '../SocialLinks/SocialLinks'
+import React from "react";
+import SocialNetworks from "../SocialNetworks/SocialNetworks";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <>
-      <div style={{ background: 'lightgray' }}>
-        <h1>Footer</h1>
-        <SocialLinks />
-      </div>
-    </>
-  )
+    <footer style={{ background: "lightgray" }}>
+      <SocialNetworks />
+      <p>
+        {year} &copy; David Kontorovsky.
+        <br />
+        Made with ❤️ &nbsp;in OC.
+      </p>
+    </footer>
+  );
 }

@@ -1,9 +1,9 @@
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
 
-export default function Experience() {
+export default function Experience({ nav }) {
   return (
-    <Layout>
+    <Layout nav={nav}>
       <h1>Experience Page</h1>
     </Layout>
-  )
+  );
 }

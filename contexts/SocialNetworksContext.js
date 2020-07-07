@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "../utils/socialNetworksData.json";
 
 const SocialNetworksContext = React.createContext();
 
 const SocialNetworksProvider = (props) => {
-  const [networks] = useState([...data.networks]);
-
   return (
-    <SocialNetworksContext.Provider value={{ networks }}>
+    <SocialNetworksContext.Provider value={data}>
       {props.children}
     </SocialNetworksContext.Provider>
   );

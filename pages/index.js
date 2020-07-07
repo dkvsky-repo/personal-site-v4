@@ -3,15 +3,16 @@ import ReactMarkdown from "react-markdown";
 import { getData } from "../utils/markdown-importer/markdownImporter";
 import { ABOUT } from "../constants";
 
-export default function Home({ data }) {
-  const { excerpt } = data.metadata;
+export default function Home({ about }) {
+  const { heading_1, heading_2, heading_3, image, excerpt } = about.metadata;
 
   return (
     <Layout>
       <section className="about">
-        <ReactMarkdown source={data.metadata.heading_1} />
-        <h1>{data.metadata.heading_2}</h1>
-        <p>{data.metadata.heading_3}</p>
+        <img src={image} alt="Profile image" />
+        <ReactMarkdown source={heading_1} />
+        <h1>{heading_2}</h1>
+        <p>{heading_3}</p>
       </section>
       <section className="about-excerpt">
         <ReactMarkdown source={excerpt} />
@@ -21,11 +22,11 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const data = getData(ABOUT);
+  const about = getData(ABOUT);
 
   return {
     props: {
-      data,
+      about,
     },
   };
 }

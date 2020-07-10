@@ -1,30 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Website (V4)
 
-## Getting Started
+Launching new site mid-July.
 
-First, run the development server:
+## A Few Things I Love About V4
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Built with React / Next JS and a sprinkle of Node.
+- Previous version was headless with GraphCMS, GraphQL, Apollo and React (create-react-app). **This version gets leaner, meaner, faster** following the static pages model on most of the site.
+- The content for most pages is being pulled from _markdown_ files leveraging NextJS `getStaticProps()`. Checkout the script in `/utils/markdown-importer`.
+- Using "front matter" in the markdown files to model my data was... fun 😆
+- I'm using **git submodules** for the content files in `/markdown/resume-data` 🙌 and loving how this piece of the site is totally independent from the main repo, yet in can easily be sync'd.
+- For last version I used plain CSS / Sass. This time I bite the **TailwindCSS** bullet ;-) There might be CSS/Sass and CSS-in-JS to a lesser extent (still working on it at the time of this writing).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Coming Up Next
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+("Next", get it? Pun intended)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Hosting: I was thinking about keeping **Netlify**, but most likely I'll switch to **Vercel**. Not that I don't like Netlify. It's just that I hear that the NextJS / Vercel integration makes more sense. It's a good excuse to try it out I guess.
+- Blog: There will be a blog section. It will be a phase 2 because I still haven't decided what I'll be using, but most likely it will be **Strapi**, GraphQL and NextJS of course.

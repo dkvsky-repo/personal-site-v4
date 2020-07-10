@@ -5,34 +5,33 @@ import { EXPERIENCES } from "../constants";
 
 export default function Experience({ experiences }) {
   experiences.sort((a, b) => b.metadata.order - a.metadata.order);
+
   return (
     <Layout>
-      <h1>Experience Page</h1>
       <section className="experience">
-        {experiences.map((experience) => (
-          <>
-            <div className="experience-col1">
-              {experience.metadata.logo ? (
-                <img
-                  src={experience.metadata.logo}
-                  alt={experience.metadata.organization}
-                />
+        <h1>Experience</h1>
+        {experiences.map((xp) => (
+          <div className="experience__item" key={xp.id}>
+            <div className="experience__item-col1">
+              {xp.metadata.logo ? (
+                <img src={xp.metadata.logo} alt={xp.metadata.organization} />
               ) : (
-                ""
+                false
               )}
-              <h3>{experience.metadata.organization}</h3>
-              <p>{experience.metadata.location}</p>
+            </div>
+            <div className="experience__item-col2">
+              <h3>{xp.metadata.job_title}</h3>
               <p>
-                {experience.metadata.dateFrom}{" "}
-                {experience.metadata.dateTo
-                  ? `- ${experience.metadata.dateTo}`
-                  : "Present"}
+                <strong>{xp.metadata.organization}</strong>,{" "}
+                {xp.metadata.location}
               </p>
+              <p>
+                {xp.metadata.dateFrom}{" "}
+                {xp.metadata.dateTo ? `- ${xp.metadata.dateTo}` : "Present"}
+              </p>
+              <ReactMarkdown source={xp.content} />
             </div>
-            <div className="experience col2">
-              <ReactMarkdown source={experience.content} />
-            </div>
-          </>
+          </div>
         ))}
       </section>
     </Layout>

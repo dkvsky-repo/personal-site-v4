@@ -8,7 +8,7 @@ export default function Navigation() {
     { name: "Education", path: "/education" },
     { name: "Projects", path: "/projects" },
     { name: "Recommendations", path: "/recommendations" },
-    { name: "Blog", path: "/blog" },
+    // { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
   return (

@@ -1,5 +1,5 @@
-import React from "react";
-import data from "../utils/socialNetworksData.json";
+import React from 'react';
+import data from '../utils/socialNetworksData.json';
 
 const SocialNetworksContext = React.createContext();
 

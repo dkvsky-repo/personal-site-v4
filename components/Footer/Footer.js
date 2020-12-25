@@ -1,16 +1,19 @@
-import React from "react";
-import SocialNetworks from "../SocialNetworks/SocialNetworks";
+import styled from 'styled-components';
+import * as Helpers from '../StyledHelpers';
+import SocialNetworks from '../SocialNetworks/SocialNetworks';
+
+const StyledFooter = styled(Helpers.FlexCenteredXY)``;
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer style={{ background: "lightgray" }}>
+    <StyledFooter as='footer' className='footer container-fluid'>
       <SocialNetworks />
       <p>
-        {year} &copy; David Kontorovsky.
+        Made with ❤ &nbsp;in Orange County, CA.
         <br />
-        Made with ❤️ &nbsp;in OC.
+        {year} &copy; David Kontorovsky.
       </p>
-    </footer>
+    </StyledFooter>
   );
 }

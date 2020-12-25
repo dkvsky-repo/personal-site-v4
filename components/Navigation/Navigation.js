@@ -1,23 +1,47 @@
-import Link from "next/link";
+import Link from 'next/link';
+import styled from 'styled-components';
+
+const StyledNavigation = styled.nav`
+  margin: auto 32px;
+
+  .brand-name {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .nav-item {
+    a {
+      color: #415462;
+    }
+  }
+`;
 
 export default function Navigation() {
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Experience", path: "/experience" },
-    { name: "Education", path: "/education" },
-    { name: "Projects", path: "/projects" },
-    { name: "Recommendations", path: "/recommendations" },
+    // { name: 'Home', path: '/' },
+    { name: 'about', path: '/about' },
+    { name: 'projects', path: '/projects' },
+    { name: 'recommendations', path: '/recommendations' },
     // { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: 'contact', path: '/contact' },
   ];
+
   return (
-    <nav>
-      {navItems.map((item) => (
-        <Link href={item.path} key={item.name}>
-          <a>{item.name}</a>
+    <StyledNavigation>
+      <ul>
+        <Link href='/' key='home'>
+          <li className='brand-name'>David Kontorovsky</li>
         </Link>
-      ))}
-    </nav>
+      </ul>
+      <ul>
+        {navItems.map((item) => (
+          <li className='nav-item' key={item.name}>
+            <Link href={item.path}>
+              <a>{item.name}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </StyledNavigation>
   );
 }

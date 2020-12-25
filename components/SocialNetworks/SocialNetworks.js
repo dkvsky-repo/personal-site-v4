@@ -1,21 +1,21 @@
-import { useContext } from "react";
-import { SocialNetworksContext } from "../../contexts/SocialNetworksContext";
+import { useContext } from 'react';
+import { SocialNetworksContext } from '../../contexts/SocialNetworksContext';
 
 export default function SocialNetworks() {
   const data = useContext(SocialNetworksContext);
 
   return (
-    <section className="social-networks">
+    <div className='social-networks'>
       {data.networks.map((network) => (
         <a
           href={network.url}
           key={network.name}
-          target="_blank"
-          rel="noreferrer noopener"
+          target='_blank'
+          rel='noreferrer noopener'
         >
           {network.name}
         </a>
       ))}
-    </section>
+    </div>
   );
 }

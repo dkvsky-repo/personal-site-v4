@@ -1,11 +1,16 @@
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import styled from 'styled-components';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+
+const MainWrapper = styled.main`
+  margin-top: 4.125rem;
+`;
 
 export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <MainWrapper className='container-fluid'>{children}</MainWrapper>
       <Footer />
     </>
   );

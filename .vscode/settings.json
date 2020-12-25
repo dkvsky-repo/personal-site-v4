@@ -9,10 +9,13 @@
     "editor.tabCompletion": "on",
     "editor.formatOnSave": true,
     "files.autoSave": "onFocusChange",
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "editor.renderWhitespace": "all",
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
     "debug.console.fontSize": 14,
-    "terminal.integrated.fontSize": 14
+    "terminal.integrated.fontSize": 14,
+    "css.validate": false,
+    "tailwindCSS.emmetCompletions": true,
+    "editor.fontFamily": "'Cascadia Code'"
 }

@@ -1,6 +1,6 @@
 # Personal Website (V4)
 
-Launching new site mid-July.
+Launching new site ~~mid-July~~ soon!
 
 ## A Few Things I Love About V4
 
@@ -9,7 +9,7 @@ Launching new site mid-July.
 - The content for most pages is being pulled from _markdown_ files leveraging NextJS `getStaticProps()`. Checkout the script in `/utils/markdown-importer`.
 - Using "front matter" in the markdown files to model my data was... fun 😆
 - I'm using **git submodules** for the content files in `/markdown/resume-data` 🙌 and loving how this piece of the site is totally independent from the main repo, yet in can easily be sync'd.
-- For last version I used plain CSS / Sass. This time I bite the **TailwindCSS** bullet ;-) There might be CSS/Sass and CSS-in-JS to a lesser extent (still working on it at the time of this writing).
+- ~~For last version I used plain CSS / Sass. This time I bite the **TailwindCSS** bullet ;-) There might be CSS/Sass and CSS-in-JS to a lesser extent (still working on it at the time of this writing).~~ UPDATE (Dec. 2020). Well, after some work done with TailwindCSS I realized it was a very bad idea. I don't feel right about polluting markup with all those utility classes. I can see future maintenance becoming a nightmare. I am switching to Styled Components.
 
 ## Coming Up Next
 

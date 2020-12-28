@@ -3,11 +3,12 @@ import ReactMarkdown from 'react-markdown';
 import { FlexCenteredXY } from '../StyledHelpers';
 import DownloadResumeButton from '../Resume/DownloadResumeButton';
 
-const HeroWrapper = styled.div`
+const HeroWrapper = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: -1rem;
   margin-right: -1rem;
+  padding: 4rem 3rem;
 
   @media (max-width: 1024px) {
     background-image: url('./images/hero-1024w.jpeg');
@@ -23,7 +24,6 @@ const HeroWrapper = styled.div`
 `;
 const StyledHero = styled(FlexCenteredXY)`
   width: 100%;
-  padding: 2.8rem;
   .avatar {
     padding: 8px;
     margin-bottom: 8px;

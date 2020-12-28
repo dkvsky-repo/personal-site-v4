@@ -1,10 +1,12 @@
 import Layout from '../components/Layout';
-// import ReactMarkdown from 'react-markdown';
 import { getData } from '../utils/markdown-importer/markdownImporter';
-import { ABOUT } from '../constants';
+import { ABOUT, RECOMMENDATIONS } from '../constants';
 import Hero from '../components/Hero/Hero';
+import MyStack from '../components/MyStack/MyStack';
+import SeHablaCodigo from '../components/SeHablaCodigo/SeHablaCodigo';
+import Recommendations from '../components/Recommendations/recommendations';
 
-export default function Home({ about }) {
+export default function Home({ about, recommendations }) {
   const {
     main_headline,
     secondary_headline,
@@ -20,26 +22,21 @@ export default function Home({ about }) {
         secondaryHeadline={secondary_headline}
         supportHeadline={support_headline}
       />
-      <section>
-        {/* <div>
-          <h1>David Kontorovsky</h1>
-        </div> */}
-        {/* <p>{secondary_headline}</p>
-        <h1>
-          <ReactMarkdown source={main_headline} />
-        </h1>
-        <ReactMarkdown source={support_headline} /> */}
-      </section>
+      <MyStack />
+      <SeHablaCodigo />
+      <Recommendations data={recommendations} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
   const about = getData(ABOUT);
+  const recommendations = getData(RECOMMENDATIONS);
 
   return {
     props: {
       about,
+      recommendations,
     },
   };
 }

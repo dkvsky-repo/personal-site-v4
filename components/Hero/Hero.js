@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import { FlexCenteredXY } from '../StyledHelpers';
-import DownloadResume from '../Resume/DownloadResume';
+import DownloadResumeButton from '../Resume/DownloadResumeButton';
 
 const HeroWrapper = styled.div`
   background-repeat: no-repeat;
@@ -75,7 +75,7 @@ export default function Hero({
             <h3 className='headline__secondary'>{secondaryHeadline}</h3>
             <p className='headline__support'>{supportHeadline}</p>
           </div>
-          <DownloadResume />
+          <DownloadResumeButton />
         </StyledHero>
       </HeroWrapper>
     </>

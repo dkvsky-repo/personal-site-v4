@@ -39,10 +39,9 @@ export default function SeHablaCodigo() {
       <StyledSeHablaCodigo as='section'>
         <h2>Se Habla Código&#8482;</h2>
         <h4>
-          This is how I promote knowledge sharing with the community.
-          <br />
-          "Se Habla Código", is a podcast and YouTube channel focused on web
-          development (in Spanish).
+          I produce and host "Se Habla Código", a podcast and YouTube channel
+          focused on web development (in Spanish), to promote knowledge sharing
+          with the community.
         </h4>
         <div className='grid'>
           <div className='podcast'>

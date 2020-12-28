@@ -1,13 +1,13 @@
-export default function DownloadResumeButton({ width = '280px' }) {
+export default function DownloadResume({ width = '280px', fileLocation }) {
   return (
     <a
       role='button'
       className='outline'
-      href='kontorovsky_david-resume.pdf'
+      href={`${fileLocation}`}
       target='_blank'
       style={{ width: width }}
     >
-      Résumé
+      Download Résumé
     </a>
   );
 }

@@ -14,8 +14,8 @@ export default function Navigation() {
   const navItems = [
     { name: <HomeIcon />, path: '/' },
     { name: 'about', path: '/about' },
+    { name: 'résumé', path: '/resume' },
     // { name: 'projects', path: '/projects' },
-    // { name: 'recommendations', path: '/recommendations' },
     // { name: "Blog", path: "/blog" },
     { name: 'contact', path: '/contact' },
   ];

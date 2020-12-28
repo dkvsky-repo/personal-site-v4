@@ -1,30 +1,29 @@
 {
-  "networks": [
+  "socialLinks": [
     {
       "name": "LinkedIn",
-      "url": "https://www.linkedin.com/in/davidkontorovsky",
-      "image": ""
+      "url": "https://www.linkedin.com/in/davidkontorovsky"
     },
     {
-      "name": "Github",
-      "url": "https://github.com/dkvsky-repo",
-      "image": ""
+      "name": "GitHub",
+      "url": "https://github.com/dkvsky-repo"
     },
-    { "name": "Twitter", "url": "https://twitter.com/dkvsky", "image": "" },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/dkvsky"
+    },
     {
       "name": "Instagram",
-      "url": "https://www.instagram.com/sehablacodigo",
-      "image": ""
+      "url": "https://www.instagram.com/sehablacodigo"
     },
     {
-      "name": "Youtube",
-      "url": "https://www.youtube.com/channel/UCM7c4hwn-BZT67chRgpkCNg",
-      "image": ""
+      "name": "YouTube",
+      "url": "https://www.youtube.com/channel/UCM7c4hwn-BZT67chRgpkCNg"
     },
     {
       "name": "Anchor",
       "url": "https://anchor.fm/sehablacodigo",
-      "image": ""
+      "image": "MicIcon"
     }
   ]
 }

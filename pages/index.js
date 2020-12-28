@@ -1,12 +1,12 @@
 import Layout from '../components/Layout';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 import { getData } from '../utils/markdown-importer/markdownImporter';
 import { ABOUT } from '../constants';
+import Hero from '../components/Hero/Hero';
 
 export default function Home({ about }) {
   const {
     main_headline,
-    // alternative_headline,
     secondary_headline,
     support_headline,
     image,
@@ -14,17 +14,21 @@ export default function Home({ about }) {
 
   return (
     <Layout>
+      <Hero
+        avatar={image}
+        mainHeadline={main_headline}
+        secondaryHeadline={secondary_headline}
+        supportHeadline={support_headline}
+      />
       <section>
-        <div>
+        {/* <div>
           <h1>David Kontorovsky</h1>
-        </div>
-
-        <img src={image} alt='Profile image' />
-        <p>{secondary_headline}</p>
+        </div> */}
+        {/* <p>{secondary_headline}</p>
         <h1>
           <ReactMarkdown source={main_headline} />
         </h1>
-        <ReactMarkdown source={support_headline} />
+        <ReactMarkdown source={support_headline} /> */}
       </section>
     </Layout>
   );

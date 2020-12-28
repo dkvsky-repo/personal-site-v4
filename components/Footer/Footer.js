@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import * as Helpers from '../StyledHelpers';
 import SocialNetworks from '../SocialNetworks/SocialNetworks';
 
-const StyledFooter = styled(Helpers.FlexCenteredXY)``;
+const StyledFooter = styled(Helpers.FlexCenteredXY)`
+  p {
+    text-align: center;
+  }
+`;
 
 export default function Footer() {
   const year = new Date().getFullYear();

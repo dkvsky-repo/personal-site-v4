@@ -25,7 +25,7 @@ export default function Recommendations({ data }) {
   data.sort((a, b) => b.metadata.order - a.metadata.order);
 
   return (
-    <StyledRecommendationsWrapper>
+    <StyledRecommendationsWrapper className='container-fluid'>
       <h2>Recommendations</h2>
       <StyledRecommendations>
         {data.map((r) => (

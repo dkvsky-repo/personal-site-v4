@@ -2,12 +2,11 @@ import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import { FlexCenteredXY } from '../StyledHelpers';
 import DownloadResume from '../DownloadResume/DownloadResume';
+import { RESUME_PDF_FILE } from '../../constants';
 
 const HeroWrapper = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: -1rem;
-  margin-right: -1rem;
   padding: 4rem 3rem;
 
   @media (max-width: 1024px) {
@@ -62,7 +61,7 @@ export default function Hero({
 }) {
   return (
     <>
-      <HeroWrapper>
+      <HeroWrapper className='container-fluid'>
         <StyledHero>
           <div className='avatar'>
             <img src={avatar} alt='David Kontorovsky' />
@@ -75,7 +74,7 @@ export default function Hero({
             <h3 className='headline__secondary'>{secondaryHeadline}</h3>
             <p className='headline__support'>{supportHeadline}</p>
           </div>
-          <DownloadResume fileLocation='files/kontorovsky_david-resume.pdf' />
+          <DownloadResume fileLocation={RESUME_PDF_FILE} />
         </StyledHero>
       </HeroWrapper>
     </>

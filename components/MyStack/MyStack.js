@@ -11,7 +11,7 @@ const StyledMyStack = styled(FlexCenteredXY)`
 export default function MyStack() {
   return (
     <>
-      <StyledMyStack as='section'>
+      <StyledMyStack as='section' className='container-fluid'>
         <h2>Tech Stack</h2>
         <div className='grid'>
           <div>
@@ -22,9 +22,9 @@ export default function MyStack() {
             <p>JavaScript, TypeScript, and NodeJS.</p>
             <h3>Libraries and Frameworks</h3>
             <ul>
-              <li>React, NextJS, Gatsby, Styled Components, Material UI.</li>
+              <li>React, NextJS, Styled Components, Material UI.</li>
               <li>Jest, Mocha, Jasmine.</li>
-              <li>Sass, PostCSS, TailwindCSS.</li>
+              <li>Sass, PostCSS, Bootstrap, TailwindCSS.</li>
               <li>
                 Templating with Handlebars, Mustache, NunJucks and Liquid.
               </li>

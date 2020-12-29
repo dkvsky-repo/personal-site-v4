@@ -6,8 +6,6 @@ const StyledSeHablaCodigo = styled(FlexCenteredXY)`
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
   padding: 16px;
-  margin-left: -1rem;
-  margin-right: -1rem;
   h2 {
     color: #ffc839;
     text-align: center;
@@ -15,7 +13,7 @@ const StyledSeHablaCodigo = styled(FlexCenteredXY)`
     padding-top: 3rem;
   }
   h3 {
-    color: #a0c96b;
+    color: #ff4500;
   }
   h4 {
     text-align: center;
@@ -29,14 +27,17 @@ const StyledSeHablaCodigo = styled(FlexCenteredXY)`
   }
   .podcast,
   .youtube {
+    background-color: #191919;
+    border-radius: 8px;
     padding: 2rem;
+    margin-bottom: 1rem;
   }
 `;
 
 export default function SeHablaCodigo() {
   return (
     <>
-      <StyledSeHablaCodigo as='section'>
+      <StyledSeHablaCodigo as='section' className='container-fluid'>
         <h2>Se Habla Código&#8482;</h2>
         <h4>
           I produce and host "Se Habla Código", a podcast and YouTube channel

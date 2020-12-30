@@ -1,13 +1,13 @@
-import Layout from '../../components/Layout';
+import PagesLayout from '../../components/PagesLayout';
 import ReactMarkdown from 'react-markdown';
 import { getData } from '../../utils/markdown-importer/markdownImporter';
 import { ABOUT } from '../../constants';
 
 export default function About({ about }) {
   return (
-    <Layout>
+    <PagesLayout>
       <section className='container'>
-        <h1>{about.id}</h1>
+        <h1>About me</h1>
         <div className='grid'>
           <div className='sidebar'>
             <img src='images/aboutmepic.jpeg' alt='DK in pics' />
@@ -17,7 +17,7 @@ export default function About({ about }) {
           </div>
         </div>
       </section>
-    </Layout>
+    </PagesLayout>
   );
 }
 

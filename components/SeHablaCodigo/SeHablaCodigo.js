@@ -3,9 +3,7 @@ import { FlexCenteredXY } from '../StyledHelpers';
 
 const StyledSeHablaCodigo = styled(FlexCenteredXY)`
   background-color: #0c0c0c;
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
-  padding: 16px;
+  padding-bottom: 4.125rem;
   h2 {
     color: #ffc839;
     text-align: center;
@@ -38,12 +36,14 @@ export default function SeHablaCodigo() {
   return (
     <>
       <StyledSeHablaCodigo as='section' className='container-fluid'>
-        <h2>Se Habla Código&#8482;</h2>
-        <h4>
-          I produce and host "Se Habla Código", a podcast and YouTube channel
-          focused on web development (in Spanish), to promote knowledge sharing
-          with the community.
-        </h4>
+        <div className='container'>
+          <h2>Se Habla Código&#8482;</h2>
+          <h4>
+            I produce and host "Se Habla Código", a podcast and YouTube channel
+            focused on web development, to promote knowledge sharing within the
+            Spanish-speaking dev community.
+          </h4>
+        </div>
         <div className='grid'>
           <div className='podcast'>
             <h3>Podcast</h3>

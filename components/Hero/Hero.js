@@ -5,9 +5,10 @@ import DownloadResume from '../DownloadResume/DownloadResume';
 import { RESUME_PDF_FILE } from '../../constants';
 
 const HeroWrapper = styled.section`
+  background-color: #0d0d0d;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4rem 3rem;
+  padding: 4.125rem;
 
   @media (max-width: 1024px) {
     background-image: url('./images/hero-1024w.jpeg');
@@ -74,7 +75,7 @@ export default function Hero({
             <h3 className='headline__secondary'>{secondaryHeadline}</h3>
             <p className='headline__support'>{supportHeadline}</p>
           </div>
-          <DownloadResume fileLocation={RESUME_PDF_FILE} />
+          <DownloadResume className='outline' fileLocation={RESUME_PDF_FILE} />
         </StyledHero>
       </HeroWrapper>
     </>

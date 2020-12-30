@@ -12,7 +12,7 @@ const StyledRecommendations = styled.div`
   grid-gap: var(--spacing-gutter);
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   .recommendation__item {
-    background-color: #f3f4f5;
+    background-color: #ffffff;
     padding: 1rem;
     border-radius: 8px;
   }
@@ -26,7 +26,9 @@ export default function Recommendations({ data }) {
 
   return (
     <StyledRecommendationsWrapper className='container-fluid'>
-      <h2>Recommendations</h2>
+      <div className='container'>
+        <h2>Recommendations</h2>
+      </div>
       <StyledRecommendations>
         {data.map((r) => (
           <div className='recommendation__item' key={r.id}>

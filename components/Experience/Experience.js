@@ -1,34 +1,60 @@
 import ReactMarkdown from 'react-markdown';
+import styled from 'styled-components';
+
+const StyledExperience = styled.section`
+  .experience-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  .company-logo {
+    img {
+      border-radius: 50%;
+      max-width: 180px;
+      padding: 1rem;
+    }
+  }
+  .job-description {
+    max-width: 75%;
+  }
+  .job-title {
+    font-weight: bold;
+  }
+`;
 
 export default function Experience({ data }) {
   data.sort((a, b) => b.metadata.order - a.metadata.order);
 
   return (
-    <section className='experience'>
-      <h1>Experience</h1>
+    <StyledExperience>
+      <h2>Experience</h2>
       {data.map((xp) => (
-        <div className='experience__item' key={xp.id}>
-          <div className='experience__item-col1'>
+        <div className='experience-item' key={xp.id}>
+          <div className='company-logo'>
             {xp.metadata.logo ? (
               <img src={xp.metadata.logo} alt={xp.metadata.organization} />
             ) : (
               false
             )}
           </div>
-          <div className='experience__item-col2'>
-            <h3>{xp.metadata.job_title}</h3>
+          <div className='job-description'>
             <p>
+              <span className='job-title'>{xp.metadata.job_title}</span>
+              <br />
               <strong>{xp.metadata.organization}</strong>,{' '}
-              {xp.metadata.location}
-            </p>
-            <p>
-              {xp.metadata.dateFrom}{' '}
-              {xp.metadata.dateTo ? `- ${xp.metadata.dateTo}` : 'Present'}
+              {xp.metadata.location} <br />
+              <small>
+                {xp.metadata.dateFrom}{' '}
+                {xp.metadata.dateTo ? `- ${xp.metadata.dateTo}` : 'Present'}
+              </small>
             </p>
             <ReactMarkdown source={xp.content} />
           </div>
         </div>
       ))}
-    </section>
+    </StyledExperience>
   );
 }

@@ -4,11 +4,12 @@ import Footer from './Footer/Footer';
 
 const MainWrapper = styled.div`
   margin-top: 4.125rem;
+  padding-top: 4.125rem;
   margin-bottom: 4.125rem;
   background-color: #f5f5f5;
 `;
 
-export default function Layout({ children }) {
+export default function PagesLayout({ children }) {
   return (
     <>
       <Header />

@@ -12,7 +12,9 @@ export default function MyStack() {
   return (
     <>
       <StyledMyStack as='section' className='container-fluid'>
-        <h2>Tech Stack</h2>
+        <div className='container'>
+          <h2>Tech Stack</h2>
+        </div>
         <div className='grid'>
           <div>
             <img src='images/my-mac.png' alt='Laptop with stickers' />

@@ -1,8 +1,12 @@
-export default function DownloadResume({ width = '280px', fileLocation }) {
+export default function DownloadResume({
+  width = '280px',
+  className = '',
+  fileLocation,
+}) {
   return (
     <a
       role='button'
-      className='outline'
+      className={className}
       href={`${fileLocation}`}
       target='_blank'
       style={{ width: width }}

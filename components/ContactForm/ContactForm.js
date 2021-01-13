@@ -47,12 +47,13 @@ const ContactForm = () => {
       info: { error: false, msg: null },
     });
   };
+  const FORMSPREE_URL = process.env.FORMSPREE_URL;
   const handleOnSubmit = (e) => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({
       method: 'POST',
-      url: 'https://formspree.io/f/mzbkkyon',
+      url: `${FORMSPREE_URL}`,
       data: inputs,
     })
       .then((response) => {
@@ -67,8 +68,11 @@ const ContactForm = () => {
   };
   return (
     <StyledContactForm>
-      <p>So many ways to contact me! 😀<br />
-      Send me a quick message here, or use any of the social links below.</p>
+      <p>
+        So many ways to contact me! 😀
+        <br />
+        Send me a quick message here, or use any of the social links below.
+      </p>
       <hr />
       <form onSubmit={handleOnSubmit}>
         <label htmlFor='email'>Email</label>

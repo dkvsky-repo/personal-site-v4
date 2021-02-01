@@ -6,7 +6,6 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   background: white;
-  /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 3px 0 rgba(0, 0, 0, 0.09); */
   padding: 0;
   height: 4rem;
 `;

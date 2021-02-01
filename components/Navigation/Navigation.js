@@ -16,8 +16,8 @@ export default function Navigation() {
     { name: 'about', path: '/about' },
     { name: 'résumé', path: '/resume' },
     // { name: 'projects', path: '/projects' },
-    // { name: "Blog", path: "/blog" },
     { name: 'contact', path: '/contact' },
+    { name: 'blog', path: 'https://blog.davidkontorovsky.com' },
   ];
 
   return (
@@ -30,9 +30,15 @@ export default function Navigation() {
       <ul>
         {navItems.map((item) => (
           <li className='nav-item' key={item.name}>
-            <Link href={item.path}>
-              <a>{item.name}</a>
-            </Link>
+            {item.name === 'blog' ? (
+              <Link href={item.path}>
+                <a target='_blank'>{item.name}</a>
+              </Link>
+            ) : (
+              <Link href={item.path}>
+                <a>{item.name}</a>
+              </Link>
+            )}
           </li>
         ))}
       </ul>
